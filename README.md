@@ -62,6 +62,12 @@ Optional: Redis for distributed setup
 
 ---
 
+# 📄 License
+
+This project is open-source and free to use. ❤️ 
+
+---
+
 ## ⚙️ Installation & Run Locally
 
 ### Backend and Frontend
@@ -72,4 +78,4 @@ npm start
 
 cd frontend
 npm install
-npm start  
+npm start
