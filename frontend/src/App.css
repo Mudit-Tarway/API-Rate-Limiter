@@ -1,0 +1,149 @@
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+/* Animated gradient background */
+body {
+  background: linear-gradient(-45deg, #6a11cb, #2575fc, #ff6a00, #f0c27b);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating particles */
+.particle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) translateX(50px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Container */
+.container {
+  text-align: center;
+  padding: 30px;
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+}
+
+/* Button */
+.button {
+  background-color: white;
+  color: #2575fc;
+  border: none;
+  padding: 12px 35px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  z-index: 3;
+  position: relative;
+}
+
+.button:hover {
+  background-color: #2575fc;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+}
+
+.button.disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Messages */
+.rate-limit-msg {
+  margin-top: 15px;
+  font-weight: bold;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8); /* subtle white glow behind text */
+  padding: 8px 15px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
+  font-size: 1.1rem;
+  text-align: center;
+  animation: pulse 1.5s infinite;
+}
+
+/* Pulse animation to make it slightly glow */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+
+.api-msg {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Chart card */
+.chart-card {
+  background-color: rgba(255,255,255,0.15);
+  color: white;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.chart-card:hover {
+  transform: translateY(-5px);
+}
