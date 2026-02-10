@@ -3,6 +3,8 @@
 A **full-stack web application** to simulate and visualize **API rate limiting** using the **Token Bucket algorithm**.  
 This project demonstrates **multi-user request handling**, **backend logic**, and an **interactive frontend dashboard**.  
 
+
+🌐 **Live Demo:** [View Deployed App](https://api-rate-limiter-1-766a.onrender.com)
 ---
 
 ## ✨ Features
